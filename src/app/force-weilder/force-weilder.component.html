@@ -1,15 +1,14 @@
-<p>
-  force-weilder works!
-</p>
 <h2>{{forceWeilder.name | uppercase}} Details</h2>
 <div><span>id: </span>{{forceWeilder.id}}</div>
 <div><span>name: </span>{{forceWeilder.name}}</div>
-<div><span>force: </span>{{forceWeilder.force | forceToThird}}</div>
-
 <div>
   <label>force:
     <input [(ngModel)]="forceWeilder.force" placeholder="force"/>
   </label>
 </div>
+
+<div><span>force^3: </span>{{forceWeilder.force | forceToThird}}</div>
+
+
 
 <!-- {{forceWeilder}} -->
