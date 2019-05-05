@@ -9,8 +9,9 @@ import { ForceWeilder } from '../force-weilder';
 export class ForceWeilderComponent implements OnInit {
 
   forceWeilder: ForceWeilder = {
+    id : 1,
     name : "Mace Windu",
-    id : 1
+    force : 42
   }
   constructor() { }
 
