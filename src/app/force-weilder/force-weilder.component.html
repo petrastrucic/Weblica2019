@@ -1,14 +1,21 @@
-<h2>{{forceWeilder.name | uppercase}} Details</h2>
-<div><span>id: </span>{{forceWeilder.id}}</div>
-<div><span>name: </span>{{forceWeilder.name}}</div>
-<div>
-  <label>force:
-    <input [(ngModel)]="forceWeilder.force" placeholder="force"/>
-  </label>
+<h2>My Force Weilders</h2>
+<ul class="weilders">
+  <li *ngFor="let weilder of weilders"
+    [class.selected]="weilder === selectedForceWeilder"
+    (click)="onSelect(weilder)">
+    <span class="badge">{{weilder.id}}</span> {{weilder.name}} 
+  </li>
+</ul>
+
+<div *ngIf="selectedForceWeilder">
+  <h2>{{forceWeilder.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{forceWeilder.id}}</div>
+  <label>name:
+      <input [(ngModel)]="selectedForceWeilder.name" placeholder="name"/>
+    </label>
+  <div>
+    <label>force:
+      <input [(ngModel)]="selectedForceWeilder.force" placeholder="force"/>
+    </label>
+  </div>
 </div>
-
-<div><span>force^3: </span>{{forceWeilder.force | forceToThird}}</div>
-
-
-
-<!-- {{forceWeilder}} -->
