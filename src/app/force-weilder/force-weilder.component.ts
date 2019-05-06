@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ForceWeilder } from '../models/force-weilder';
-import { WEILDERS } from '../models/mock-force-weilder';
 import { ForceWeilderService } from '../force-weilder.service';
 
 @Component({
